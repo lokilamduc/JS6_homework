@@ -41,8 +41,8 @@ class Customer extends Person {
   }
 }
 
-// let listPerson = getDataFromLocalStorage();
-let listPerson = [];
+let listPerson = getDataFromLocalStorage();
+// let listPerson = [];
 let inputType = "";
 
 renderTable(listPerson);
@@ -710,7 +710,7 @@ function searchPerson() {
   let search = getElement("#searchName").value;
 
   let newListPerson = listPerson.filter((person) => {
-    return person.name().indexOf(search) !== -1;
+    return person.name.indexOf(search) !== -1;
   });
 
   renderTable(newListPerson);
